@@ -1,4 +1,8 @@
 
+
+
+
+var count=0
 async function Data(){
     let response= await fetch("https://fakestoreapi.com/products")
     let data=await response.json()
@@ -14,10 +18,13 @@ async function Data(){
             let button1=document.createElement("button")
             let button2=document.createElement("button")
             let b_div=document.createElement("div")
+            let notify=document.querySelector(".notify")
+            let notid2fy=document.querySelector("#id2")
             b_div.append(button1,button2)
             maindiv.appendChild(div)
             imgdiv.appendChild(img)
             div.append(imgdiv,h1,p,b_div)
+            
             /*----------css--------------*/
             
 
@@ -30,8 +37,52 @@ async function Data(){
             h1.className="title"
             /*-----------events-----*/
             button1.addEventListener("click",(e)=>{
-                console.log("hii")
-                Cart(e)
+                
+                if( e.target.innerText=="Add To Cart"){
+                    e.target.innerText="Remove From Cart"
+                    e.target.style.backgroundColor="green"
+                    id2.innerText=count+1
+                    
+                   
+                    count=count+1
+                    
+                    
+                    
+                    if (count!=0){
+                        notify.style.display="block"
+
+                    }else{
+                        notify.style.display="none"
+
+                    }
+                   
+
+                }else{
+                    e.target.innerText="Add To Cart"
+                    e.target.style.backgroundColor="rgb(255, 208, 0)"
+                    
+                    count=count-1
+                    console.log(count)
+                    if (count !=0){
+                        notify.style.display="block"
+                        
+
+                    }else{
+                        notify.style.display="none"
+
+                    }
+
+                    
+                    
+                    
+                    
+
+                }
+                
+
+               
+               
+                
             })
 
 
@@ -43,7 +94,7 @@ async function Data(){
             img.src=e.image
             h1.innerText=e.title
             p.innerText="$"+e.price
-            button1.innerText="Add to Cart"
+            button1.innerText="Add To Cart"
             button2.innerText="Buy"
            
 
