@@ -41,10 +41,11 @@ async function Data(){
                 if( e.target.innerText=="Add To Cart"){
                     e.target.innerText="Remove From Cart"
                     e.target.style.backgroundColor="green"
-                    id2.innerText=count+1
+                    count=count+1
+                    id2.innerText=count
                     
                    
-                    count=count+1
+                    
                     
                     
                     
@@ -60,9 +61,11 @@ async function Data(){
                 }else{
                     e.target.innerText="Add To Cart"
                     e.target.style.backgroundColor="rgb(255, 208, 0)"
-                    
                     count=count-1
-                    console.log(count)
+                    id2.innerText=count
+                    
+                    
+                    
                     if (count !=0){
                         notify.style.display="block"
                         

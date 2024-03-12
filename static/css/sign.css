@@ -222,3 +222,24 @@ nav ul li a:hover{
     left: 30%;
 
 }
+.notify{
+  height: 16px;
+  width: 16px;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  background-color: red;
+  position: absolute;
+  right: 50px;
+  top: 2px;
+  z-index: 6;
+}
+.notify p{
+  color: white;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+}

@@ -19,7 +19,8 @@ def Homepage(request):
     pwd=request.POST["pwd"]
     re_pwd=request.POST["re_pwd"]
     
-    if pwd!=re_pwd or len(email) ==0 :
+    if pwd!=re_pwd or len(email) ==0 or len(name)==0 :
+        
         message="Enter Correct Details!!"
         return render(request,"login.html",{"message":message})
     else:
