@@ -42,7 +42,6 @@ def Homepage(request):
     re_pwd=request.POST["re_pwd"]
     request.session["mail"]=email
     request.session["pwd"]=pwd
-    request.session.set_expiry(0)
     
     if pwd!=re_pwd or len(email) ==0 or len(name)==0 :
         
