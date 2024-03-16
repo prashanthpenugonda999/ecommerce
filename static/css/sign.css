@@ -118,6 +118,7 @@ nav ul li a:hover{
   border: 1px solid red;
   border-radius: 10px;
   
+  
 }
 .maincolor{
   background-color: white;
@@ -219,7 +220,7 @@ nav ul li a:hover{
     position: absolute;
     top: 60px;
     font-family: sans-serif;
-    left: 30%;
+    left: 40%;
 
 }
 .notify{

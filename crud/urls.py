@@ -20,9 +20,10 @@ from emp_register import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.index),
-    
+    path("Register",views.Register),
     path("login",views.Login),
-    path("homepage",views.Homepage)
+    path("homepage",views.Homepage),
+    path("loginpage",views.Loginpage)
 
     
 ]

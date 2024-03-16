@@ -21,8 +21,8 @@
             <li>
               <h3><a href="/">Project</a></h3>
             </li>
-            <li><a style="color: white;" href="/register">Register</a></li>
-            <li><a id="login" href="/login">Login</a></li>
+            <li><a style="color: red;" href="#">Register</a></li>
+            <li><a style="color: white;" id="login" href="/login">Login</a></li>
           </ul>
         </nav>
         <div class="notify">
@@ -35,13 +35,13 @@
         </div>
       </div>
     <div class="form-info">
-        <form method="POST" class="form" action="loginpage">
+        <form method="POST" class="form" action="homepage">
             {% csrf_token %}
             <h1>{{message}}</h1>
-            
+            <input type="text" name="name" placeholder="&nbsp;&nbsp;&nbsp;Enter The Name">
             <input type="email" name="mail"  placeholder="&nbsp;&nbsp;&nbsp;Enter the Email">
             <input type="password" name="pwd" placeholder="&nbsp;&nbsp;&nbsp;Enter The Password">
-            
+            <input type="password" name="re_pwd" placeholder="&nbsp;&nbsp;&nbsp;Confirm Password">
             <button >{{login}}</button>
         </form>
     </div>
